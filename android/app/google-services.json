@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "584642886459",
+    "project_id": "email-recognition",
+    "storage_bucket": "email-recognition.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584642886459:android:a997a067b10c7d29e1d51e",
+        "android_client_info": {
+          "package_name": "com.example.email_recognition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584642886459-l1olg9ukccb2mkei7d7c4sd6mncmlqdr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4r46Q6EVZa739EpgH2LZgv-rKMgPUFLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584642886459-l1olg9ukccb2mkei7d7c4sd6mncmlqdr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
