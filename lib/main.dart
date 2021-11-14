@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:camera/camera.dart';
-import 'package:flutter/material.dart';
 import 'package:email_recognition/image_detail.dart';
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -98,7 +98,7 @@ class _CameraScreenState extends State<CameraScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ML Vision'),
+        title: Text('ML OCR'),
       ),
       body: _controller.value.isInitialized
           ? Stack(
@@ -110,7 +110,7 @@ class _CameraScreenState extends State<CameraScreen> {
                     alignment: Alignment.bottomCenter,
                     child: RaisedButton.icon(
                       icon: Icon(Icons.camera),
-                      label: Text("Click"),
+                      label: Text("Chụp"),
                       onPressed: () async {
                         await _takePicture().then((String? path) {
                           if (path != null) {

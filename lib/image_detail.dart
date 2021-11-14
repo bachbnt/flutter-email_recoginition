@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:firebase_ml_vision/firebase_ml_vision.dart';
+import 'dart:async';
 import 'dart:io';
 import 'dart:ui';
-import 'dart:async';
+
+import 'package:firebase_ml_vision/firebase_ml_vision.dart';
+import 'package:flutter/material.dart';
 
 class DetailScreen extends StatefulWidget {
   final String imagePath;
@@ -17,7 +18,7 @@ class _DetailScreenState extends State<DetailScreen> {
 
   final String path;
 
-  late Size _imageSize;
+  Size? _imageSize;
   List<TextElement> _elements = [];
   String recognizedText = "Loading ...";
 
@@ -89,7 +90,7 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Image Details"),
+        title: Text("Hình ảnh"),
       ),
       body: _imageSize != null
           ? Stack(
@@ -100,9 +101,9 @@ class _DetailScreenState extends State<DetailScreen> {
                     color: Colors.black,
                     child: CustomPaint(
                       foregroundPainter:
-                          TextDetectorPainter(_imageSize, _elements),
+                          TextDetectorPainter(_imageSize!, _elements),
                       child: AspectRatio(
-                        aspectRatio: _imageSize.aspectRatio,
+                        aspectRatio: _imageSize!.aspectRatio,
                         child: Image.file(
                           File(path),
                         ),
@@ -125,7 +126,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
                             child: Text(
-                              "Identified emails",
+                              "Email nhận diện",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
